@@ -7,15 +7,12 @@
 			todos = [...todos, newTodo];
 			newTodo = "";
 		}
-		else{
-			newTodo = evt.target.value;
-		}
 	}
 </script>
 
 <label>
 	New To-Do
-	<input type="text" value={newTodo} on:keyup={handleKeyup} />
+	<input type="text" bind:value={newTodo} on:keyup={handleKeyup} />
 </label>
 
 {#if todos.length == 0}
